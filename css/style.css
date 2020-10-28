@@ -2,6 +2,7 @@
     color: #333333;
     text-decoration: none;
     transition: .5s;
+    font-weight: 400;
 }
 .text-footer:hover{
     letter-spacing: 2px;
