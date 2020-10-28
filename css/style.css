@@ -1,0 +1,11 @@
+.text-footer{
+    color: #333333;
+    text-decoration: none;
+    transition: .5s;
+}
+.text-footer:hover{
+    letter-spacing: 2px;
+    transition: .5s;
+    color: #333333;
+    text-decoration: none;
+}
