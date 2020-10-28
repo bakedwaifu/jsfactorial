@@ -21,20 +21,20 @@ var app = new Vue({
             }
         },
         res : function (){
-            let i,res_1,res_2;
-            let count = this.input_1*this.input_2;
 
-            for(i=1;i<count;i++){
+            let i;
+            let a = this.input_1;
+            let b = this.input_2;
 
-                res_1 = i%this.input_1;
-                res_2 = i%this.input_2;
-
-                if(res_1==0 && res_2==0){
-                    this.kpk = i;
-                    break;
-                }
-
-            }
+            if (a > b) {
+                i = a;
+                a = b;
+                b = i;
+               }
+           
+               for (i = b; i % a != 0 || i % b != 0; i++);
+               this.kpk = i;
+           
         }
     }
   });
