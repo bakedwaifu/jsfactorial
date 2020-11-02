@@ -5,21 +5,9 @@ var app = new Vue({
       kpk : '',
       input_1: '',
       input_2: '',
+      wait: '',
     },
     methods : {
-        factorials : function (){
-            if(this.input_1 < 0){
-                this.factorial = 'Masukan Angka Diatas 0';
-            }
-            else{
-                let i = '';
-                let res = 1;
-                for(i=1;i <= this.input_1;i++){
-                    res *= i;
-                }
-                this.factorial = res;
-            }
-        },
         res : function (){
 
             let i;
@@ -35,6 +23,22 @@ var app = new Vue({
                for (i = b; i % a != 0 || i % b != 0; i++);
                this.kpk = i;
            
+        },
+        
+    },
+    watch: {
+        input_1 : function(){
+            if(this.input_1 < 0){
+                this.factorial = 'Masukan Angka Diatas 0';
+            }
+            else{
+                let i = '';
+                let res = 1;
+                for(i=1;i <= this.input_1;i++){
+                    res *= i;
+                }
+                this.factorial = res;
+            }
         }
     }
   });
